@@ -3,16 +3,19 @@ import CoreGraphics
 import Foundation
 import Vision
 
-/// Cuts the subject out of a photo and saves it as a transparent PNG, using the same on-device
-/// Vision model as "Lift subject from background" in Photos. Nothing leaves the Mac.
+/// Removes the background of an image and saves it as a transparent PNG. Like remove.bg, it first
+/// decides what kind of image it is:
+/// * **Graphics** (logos, icons, text on a plain background) are keyed by color, so every element
+///   is kept, letter counters turn transparent and edges are un-mixed from the background.
+/// * **Photos** use the on-device Vision model behind "Lift subject from background". Nothing leaves the Mac.
 enum BackgroundRemover {
-    /// `Photo.jpg` → `Photo No Background.png` (full size, everything but the subject transparent).
+    /// `Logo.jpg` → `Logo No Background.png` (full size).
     static func removeBackground(_ item: FileItem, progress: JobProgress) throws -> URL {
         let image = try ImageIOKit.loadImage(item.url)
         try progress.checkCancelled()
         progress.report(0.15)
 
-        let cutout = try cutOut(image, name: item.name)
+        let cutout = try transparentVersion(of: image, name: item.name)
         try progress.checkCancelled()
         progress.report(0.85)
 
@@ -20,6 +23,21 @@ enum BackgroundRemover {
         try ImageIOKit.write(cutout, to: output, format: .png)
         progress.report(1)
         return output
+    }
+
+    static func transparentVersion(of image: CGImage, name: String) throws -> CGImage {
+        switch GraphicBackgroundKeyer.analyze(image) {
+        case .alreadyTransparent:
+            throw KlickError.failed("\(name) already has a transparent background")
+        case .graphic(let background):
+            return try GraphicBackgroundKeyer.key(image, background: background)
+        case .photo:
+            return try cutOut(image, name: name)
+        case .plainBackgroundPhoto(let background):
+            // e.g. a product shot on white: prefer the subject model, which keeps white parts of the
+            // subject; fall back to keying when it finds nothing.
+            return try (try? cutOut(image, name: name)) ?? GraphicBackgroundKeyer.key(image, background: background)
+        }
     }
 
     /// Returns `image` with every pixel outside the detected subjects made transparent.

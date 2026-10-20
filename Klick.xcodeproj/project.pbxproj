@@ -260,6 +260,7 @@
 		BE70BC28AE27BAE1D16EDBD5 /* cost_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 88E026BFC267686D648CA72F /* cost_mips_dsp_r2.c */; };
 		C02E811A6F6ABD66F4BA66B5 /* WheelGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E38A73A9A52250A4C8258E9 /* WheelGeometry.swift */; };
 		C047C0DCC0974B78D849C936 /* dec.c in Sources */ = {isa = PBXBuildFile; fileRef = A1616F121B4071602487353F /* dec.c */; };
+		C10EC9408DFF38F1E97723BC /* GraphicBackgroundKeyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AF2E7DA919921C92FF235C /* GraphicBackgroundKeyer.swift */; };
 		C1C75F5132A782B471D924FA /* lame-COPYING.txt in Resources */ = {isa = PBXBuildFile; fileRef = 607A88B4B1128208D35488A8 /* lame-COPYING.txt */; };
 		C244895B1FDBCE71E1A36D10 /* encoder.h in Headers */ = {isa = PBXBuildFile; fileRef = C452DC7AE4202F880A15FD6B /* encoder.h */; };
 		C2F92F9738DF60934C4F1903 /* enc_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = E5B724AAC267AFDB4F8A0FB5 /* enc_sse41.c */; };
@@ -434,6 +435,7 @@
 
 /* Begin PBXFileReference section */
 		002BFE1165F3ABEE3CB3D863 /* AnnotateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotateModel.swift; sourceTree = "<group>"; };
+		01AF2E7DA919921C92FF235C /* GraphicBackgroundKeyer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicBackgroundKeyer.swift; sourceTree = "<group>"; };
 		021BC4135FCFD2C4420A132A /* DocumentClipping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentClipping.swift; sourceTree = "<group>"; };
 		02560E5D0C6125B03C5A716E /* bit_writer_utils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bit_writer_utils.c; sourceTree = "<group>"; };
 		0338DAB89F667369504186C0 /* DocumentDOCXWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDOCXWriter.swift; sourceTree = "<group>"; };
@@ -1241,6 +1243,7 @@
 				13E0F121897C9FBB820B4A1B /* FileOps.swift */,
 				C81E823F35D12117E23A22D8 /* Formats.swift */,
 				2B6FD1FEDA3A1024660A85B2 /* GIFConverter.swift */,
+				01AF2E7DA919921C92FF235C /* GraphicBackgroundKeyer.swift */,
 				EB6E86B6237658C37E4DA14F /* ImageConverter.swift */,
 				C513E3ECFC374C932B05273A /* ImageIOKit.swift */,
 				B966D73DD91C446C5AF1D838 /* ImageTools.swift */,
@@ -1655,6 +1658,7 @@
 				C83959517C801088E84FF3B0 /* FloatShelf.swift in Sources */,
 				2FFA4545C94F8C4B3BCF265B /* Formats.swift in Sources */,
 				AF66CD7458A8C80F5E365C0A /* GIFConverter.swift in Sources */,
+				C10EC9408DFF38F1E97723BC /* GraphicBackgroundKeyer.swift in Sources */,
 				61F310502958A4C92FA23443 /* HotkeyMonitor.swift in Sources */,
 				D607CBDE6A558DC7D9E7E28D /* ImageAdjustments.swift in Sources */,
 				043725C0D6E6EDB7206E370C /* ImageConverter.swift in Sources */,
