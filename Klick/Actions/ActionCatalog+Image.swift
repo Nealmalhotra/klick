@@ -49,6 +49,9 @@ extension ActionCatalog {
             [try ImageConverter.compress(item, progress: p)]
         }
         let crop = editor("tool.crop", "CROP", symbol: "crop") { CropEditor.present(for: $0) }
+        let removeBackground = perFile("tool.removebg", "REMOVE BG", symbol: "person.and.background.dotted", verb: "Removing background") { item, p in
+            [try BackgroundRemover.removeBackground(item, progress: p)]
+        }
         guard items.count == 1 else {
             return WheelPage(id: PageID.tools, title: "Tools", actions: [
                 compress,
@@ -56,6 +59,7 @@ extension ActionCatalog {
                     [try ImageConverter.stripMetadata(item, progress: p)]
                 },
                 crop,
+                removeBackground,
                 createPDF,
                 collage,
             ])
@@ -65,6 +69,7 @@ extension ActionCatalog {
             editor("tool.metadata", "METADATA", symbol: "tag") { MetadataEditor.present(for: $0[0]) },
             editor("tool.edit", "EDIT", symbol: "slider.horizontal.3") { AdjustEditor.present(for: $0[0]) },
             editor("tool.annotate", "ANNOTATE", symbol: "pencil.tip.crop.circle") { AnnotateEditor.present(for: $0[0]) },
+            removeBackground,
             editor("tool.addbg", "ADD BG", symbol: "photo.artframe") { BackgroundEditor.present(for: $0[0]) },
             crop,
             editor("tool.redact", "REDACT", symbol: "eye.slash") { RedactEditor.present(for: $0[0]) },

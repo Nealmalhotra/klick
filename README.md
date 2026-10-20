@@ -49,7 +49,7 @@ slightly longer hold, so quick shortcuts like <kbd>⌘C</kbd> never open a wheel
 
 | Selection | Convert (⇧) | Tools (⌘) |
 | --- | --- | --- |
-| Image (JPG, PNG, WEBP, HEIC, TIFF, AVIF, BMP, SVG) | JPG/PNG · WEBP · HEIC · TIFF · AVIF · BMP · PDF · DOCX (OCR) | Compress · Metadata · Edit · Annotate · Add BG · Crop · Redact — several: Compress · Metadata · Crop · Create PDF · Collage |
+| Image (JPG, PNG, WEBP, HEIC, TIFF, AVIF, BMP, SVG) | JPG/PNG · WEBP · HEIC · TIFF · AVIF · BMP · PDF · DOCX (OCR) | Compress · Metadata · Edit · Annotate · Remove BG · Add BG · Crop · Redact — several: Compress · Metadata · Crop · Remove BG · Create PDF · Collage |
 | PDF | DOCX · PPTX · XLSX · JPG · PNG · EPUB · TXT · MD | Compress · Metadata · Split · Organize · Rotate — several: Merge PDF |
 | Video (MP4, MOV, M4V) | MP4 · MOV · GIF · M4A · MP3 | Compress · Metadata · Mute · Trim · Crop · Speed · Snapshot · Split · Redact — several: Join |
 | Audio (MP3, M4A, WAV, FLAC, OGG, OPUS, AIFF) | MP3 · M4A · WAV · FLAC · OGG · OPUS · AIFF | Compress · Metadata · Normalize · Visualize · Trim · Channels · Bleep |

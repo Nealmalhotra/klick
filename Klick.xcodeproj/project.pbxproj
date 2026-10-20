@@ -315,6 +315,7 @@
 		EADD58DA4E72DDF32101572E /* VideoTranscoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC38A476FABF0ED5F235CE07 /* VideoTranscoder.swift */; };
 		EBAC0ADB55C127910320FDB3 /* cost_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D485C201B9ED8E4702246 /* cost_enc.c */; };
 		EC24305108BA8B99BE9FACA3 /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D0936694CDC9E4754FCA2E /* SettingsWindowController.swift */; };
+		ED929A847632AD136DCE3905 /* BackgroundRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3193420B67CFA3E644D64CC /* BackgroundRemover.swift */; };
 		ED9F42A2ED5DF738A07D93A0 /* ShelfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A9BED9F4BFA92C697A64C /* ShelfView.swift */; };
 		EDFE664E2FB844158DDB38DF /* ActionCatalog+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CC1768951FC6E6D6A43AC7 /* ActionCatalog+File.swift */; };
 		EE344D9F0DDBE0AB8FEB0A41 /* format_constants.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05E09BF465FF7FEEEDC2DAE3 /* format_constants.h */; };
@@ -632,6 +633,7 @@
 		A1AA12623B6FF2FAE1B8B398 /* vp8l_dec.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vp8l_dec.c; sourceTree = "<group>"; };
 		A1CA0CC141DDB8DE25420553 /* vbrquantize.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vbrquantize.c; sourceTree = "<group>"; };
 		A26252A2D621715C3FE7EA2D /* BleepEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleepEditor.swift; sourceTree = "<group>"; };
+		A3193420B67CFA3E644D64CC /* BackgroundRemover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundRemover.swift; sourceTree = "<group>"; };
 		A3604000F6579128560788E5 /* machine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = machine.h; sourceTree = "<group>"; };
 		A43025600FAECBD5F0AE3321 /* AdjustControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustControls.swift; sourceTree = "<group>"; };
 		A4B1012BC20ED7CA59B90146 /* predictor_enc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = predictor_enc.c; sourceTree = "<group>"; };
@@ -1226,6 +1228,7 @@
 				CBB902D058296AC55999BB2E /* AudioTools.swift */,
 				F25152F83A217DB649853EB7 /* AudioVisualizer.swift */,
 				19DFF2630E0E2DDF2721B4AC /* AudioWaveform.swift */,
+				A3193420B67CFA3E644D64CC /* BackgroundRemover.swift */,
 				9E2234765D184AA1BEE8E606 /* DocumentBlocks.swift */,
 				021BC4135FCFD2C4420A132A /* DocumentClipping.swift */,
 				28D7FC24616A5181B0F9683B /* DocumentConverter.swift */,
@@ -1625,6 +1628,7 @@
 				DECB196F24A428CA040A9F80 /* AudioVisualizer.swift in Sources */,
 				7F531A8684E5D4991AD9EEB5 /* AudioWaveform.swift in Sources */,
 				6B2B63EB62E8A5F60E498FB1 /* BackgroundEditor.swift in Sources */,
+				ED929A847632AD136DCE3905 /* BackgroundRemover.swift in Sources */,
 				FBC62014E0355737C160DB49 /* BleepEditor.swift in Sources */,
 				AF6D318BF7B241A0675BF7C7 /* CSV.swift in Sources */,
 				39D38FD5F7C3496BD4B27F43 /* CollageEditor.swift in Sources */,
